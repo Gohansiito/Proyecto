@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BarsBonApp</string>
+    <string name="prefs_file">com.example.pfg.PREFERENCE_FILE_KEY</string>
+    <string name="default_web_id">217781436552-c3qsomp03vu67mri25ab97rjt7q179bk.apps.googleusercontent.com</string>
+    <string name="email_usr"> </string>
+    <string name="email">Email</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="login">Iniciar sesion</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+</resources>

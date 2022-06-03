@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/myProfile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Body Tracker" />
+    <item
+        android:id="@+id/musica"
+        android:icon="@drawable/ic_baseline_library_music_24"
+        android:title="Musica" />
+    <item
+        android:id="@+id/novedades"
+        android:icon="@drawable/ic_baseline_new_releases_24"
+        android:title="Novedades" />
+    <item
+        android:id="@+id/cronometro"
+        android:icon="@drawable/ic_baseline_timer_24"
+        android:title="Cronometro" />
+    <item
+        android:id="@+id/rutinas"
+        android:icon="@drawable/ic_baseline_fitness_center_24"
+        android:title="Rutinas" />
+</menu>

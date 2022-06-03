@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_photo">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Musica.MusicActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_caratula"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/tv_titulo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="caratula_cancion" />
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/sb_barra_duracion"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="35dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="titulo"
+        android:textSize="35sp"
+        />
+    <SeekBar
+        android:id="@+id/sb_barra_duracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/white"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/play_pausa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/tv_tiempo_actual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/sb_barra_duracion"
+        app:layout_constraintLeft_toLeftOf="@id/sb_barra_duracion"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_tiempo_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/sb_barra_duracion"
+        app:layout_constraintRight_toRightOf="@id/sb_barra_duracion"
+        android:layout_marginRight="5dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/play_pausa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/verde_claro"
+        android:src="@drawable/ic_baseline_pause_24"
+        app:borderWidth="14dp"
+        app:backgroundTint="@color/verde_oscuro"
+        app:fabCustomSize="110dp"
+        app:maxImageSize="100dp"
+        android:contentDescription="boton_play_pause" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/atras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/play_pausa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="45dp"
+        app:fabCustomSize="70dp"
+        android:src="@drawable/ic_baseline_fast_rewind_24"
+        app:maxImageSize="60dp"
+        android:backgroundTint="@color/verde_claro"
+        app:borderWidth="7dp"
+        app:backgroundTint="@color/verde_oscuro" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/play_pausa"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="45dp"
+        app:fabCustomSize="70dp"
+        android:src="@drawable/ic_baseline_fast_forward_24"
+        app:maxImageSize="60dp"
+        android:backgroundTint="@color/verde_claro"
+        app:borderWidth="7dp"
+        app:backgroundTint="@color/verde_oscuro"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_list"
+        app:headerLayout="@layout/nav_header"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
