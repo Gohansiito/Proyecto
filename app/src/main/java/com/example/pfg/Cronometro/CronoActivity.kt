@@ -115,7 +115,7 @@ class CronoActivity: AppCompatActivity() {
     {
         stopTimer()
         time = 0.0
-        binding.timeTV.text = getTimeStringFromDouble(time)
+        binding.timeTV.text = convertirTiempo(time)
     }
 
     private fun startStopTimer()
@@ -148,11 +148,11 @@ class CronoActivity: AppCompatActivity() {
         override fun onReceive(context: Context, intent: Intent)
         {
             time = intent.getDoubleExtra(ServicioCrono.TIME_EXTRA, 0.0)
-            binding.timeTV.text = getTimeStringFromDouble(time)
+            binding.timeTV.text = convertirTiempo(time)
         }
     }
 
-    private fun getTimeStringFromDouble(time: Double): String
+    private fun convertirTiempo(time: Double): String
     {
         val resultInt = time.roundToInt()
         val hours = resultInt % 86400 / 3600

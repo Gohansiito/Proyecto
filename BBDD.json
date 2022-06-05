@@ -1,0 +1,43 @@
+{
+  "Musica": [
+    null,
+    {
+      "Artista": "Scatman Jhon",
+      "Nombre": "Scatmans world",
+      "UrlArchivo": "gs://proyecto-final-2c772.appspot.com/Musica/papo.mp3",
+      "UrlImagen": "https://i.musicaimg.com/letras/250/1816939.jpg"
+    },
+    {
+      "Artista": "Pascu y rodri",
+      "Nombre": "Afrodita",
+      "UrlArchivo": "gs://proyecto-final-2c772.appspot.com/Musica/afrodita.mp3",
+      "UrlImagen": "https://images.genius.com/cb5bfc687109ba6cac71221ec3b258c2.1000x1000x1.jpg"
+    },
+    {
+      "Artista": "Julian Alfred Pankratz",
+      "Nombre": "Toss a coin to your Witcher",
+      "UrlArchivo": "gs://proyecto-final-2c772.appspot.com/Musica/witcher.mp3",
+      "UrlImagen": "https://pics.filmaffinity.com/The_Witcher_Serie_de_TV-330642357-large.jpg"
+    },
+    {
+      "Artista": "Imagine Dragons",
+      "Nombre": "Enemy",
+      "UrlArchivo": "gs://proyecto-final-2c772.appspot.com/Musica/enemy.mp3",
+      "UrlImagen": "https://m.media-amazon.com/images/I/61Oh91ND0OL._SS500_.jpg"
+    },
+    {
+      "Artista": "Dwayne Jhonson",
+      "Nombre": "Face off",
+      "UrlArchivo": "gs://proyecto-final-2c772.appspot.com/Musica/face_off.mp3",
+      "UrlImagen": "https://images.genius.com/01362307e656f85b161c1767d0c51962.980x980x1.jpg"
+    }
+  ],
+  "Noticias": [
+    null,
+    {
+      "Descripcion": "El proximo dia 3 de Septiembre sera oficialmente la primera competicion organizada por BARSBONA, las batallas seran simplemente 1vs1 los cuales se organizaran entre los propios competidores para evitar disparidad de nivel",
+      "Titulo": "Competicion BARSBONA 3 Septiembre",
+      "UrlImagen": "gs://proyecto-final-2c772.appspot.com/Img/logo.jpeg"
+    }
+  ]
+}

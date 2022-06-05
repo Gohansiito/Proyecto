@@ -29,24 +29,13 @@ class NoticiasActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.noticias)
 
-        // getting the recyclerview by its id
         val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
-
-        // this creates a vertical layout Manager
         recyclerview.layoutManager = LinearLayoutManager(this)
 
-        // ArrayList of class ItemsViewModel
         val data = ArrayList<NoticiasViewModel>()
 
-        // This loop will create 20 Views containing
-        // the image with the count of view
         data.add(NoticiasViewModel(R.drawable.logo, "Competicion BARSBONA 3 Septiembre"))
-
-
-        // This will pass the ArrayList to our Adapter
         val adapter = AdapterNoticias(data)
-
-        // Setting the Adapter with the recyclerview
 
         recyclerview.adapter = adapter
         adapter.setOnItemClickListener(object : AdapterNoticias.onItemClickListener {
@@ -54,18 +43,13 @@ class NoticiasActivity : AppCompatActivity() {
                 //Aqui se mostrara un Alert en el cual se veran los datos de la noticia
                 val dialogBuilder = AlertDialog.Builder(this@NoticiasActivity)
 
-                // set message of alert dialog
                 dialogBuilder.setMessage("El proximo dia 3 de Septiembre sera oficialmente la primera competicion organizada por BARSBONA, las batallas seran simplemente 1vs1 los cuales se organizaran entre los propios competidores para evitar disparidad de nivel")
-                    // if the dialog is cancelable
                     .setCancelable(false)
-                    // negative button text and action
                     .setNegativeButton("Cerrar") { dialog, id ->
                         dialog.cancel()
                     }
                 val alert = dialogBuilder.create()
-                // set title for alert dialog box
                 alert.setTitle("Competicion BARSBONA")
-                // show alert dialog
                 alert.show()
             }
 
@@ -84,7 +68,6 @@ class NoticiasActivity : AppCompatActivity() {
 
         navView = findViewById(R.id.navView)
 
-        // Un toast que responde cuando un elemento es clicado
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.myProfile -> {

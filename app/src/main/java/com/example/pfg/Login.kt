@@ -125,6 +125,7 @@ class Login : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+    /*
     private fun setup(botongoogle:Button){
         title="Inicio"
 
@@ -139,7 +140,7 @@ class Login : AppCompatActivity() {
 
         }
     }
-
+*/
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 

@@ -29,25 +29,17 @@ class RutinasActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.rutinas)
 
-        // getting the recyclerview by its id
         val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
-
-        // this creates a vertical layout Manager
         recyclerview.layoutManager = LinearLayoutManager(this)
 
-        // ArrayList of class ItemsViewModel
         val data = ArrayList<RutinasViewModel>()
 
-        // This loop will create 20 Views containing
-        // the image with the count of view
         for (i in 1..3) {
             data.add(RutinasViewModel(R.drawable.ic_baseline_fitness_center_24, "Rutina " + i))
         }
 
-        // This will pass the ArrayList to our Adapter
         val adapter = AdapterRutinas(data)
 
-        // Setting the Adapter with the recyclerview
 
         recyclerview.adapter = adapter
         adapter.setOnItemClickListener(object : AdapterRutinas.onItemClickListener {
@@ -55,25 +47,20 @@ class RutinasActivity : AppCompatActivity() {
                 //Aqui se mostrara un Alert en el cual se veran los datos de la rutina
                 val dialogBuilder = AlertDialog.Builder(this@RutinasActivity)
 
-                // set message of alert dialog
                 var rondas = 2*(position+1) -1
                 var series = 2*(position+1)
                 var repes = 4*(position+1)
                 var descanso = 60/(position+1)
                 dialogBuilder.setMessage("Rondas: $rondas \nSeries: $series \nRepeticiones: $repes \nDescanso: $descanso")
-                    // if the dialog is cancelable
                     .setCancelable(false)
                     .setPositiveButton("Ir a cronometro") { dialog, i ->
                         abrirCrono()
                     }
-                    // negative button text and action
                     .setNegativeButton("Cerrar") { dialog, id ->
                         dialog.cancel()
                     }
                 val alert = dialogBuilder.create()
-                // set title for alert dialog box
                 alert.setTitle("Dominadas nivel: $position")
-                // show alert dialog
                 alert.show()
             }
 

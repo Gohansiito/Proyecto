@@ -24,17 +24,12 @@ class PoseDetector:AppCompatActivity() {
             var result:Task<Pose>
             result = poseDetector.process(image)
                 .addOnSuccessListener { results ->
-                    // Task completed successfully
-                    // ...
                     val allPoseLandmarks = results.getAllPoseLandmarks()
-                    if (allPoseLandmarks.isEmpty())
-                        Toast.makeText(this, "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show()
+                    //if (allPoseLandmarks.isEmpty())
 
 
                 }
                 .addOnFailureListener { e ->
-                    // Task failed with an exception
-                    // ...
                 }
         } catch (e: IOException) {
             e.printStackTrace()
